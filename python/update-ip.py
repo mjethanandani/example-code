@@ -43,6 +43,7 @@ log = logging.getLogger(__name__)
 # Identify yang+json as the data formats
 headers = {'Content-Type': 'application/yang-data+json',
            'Accept': 'application/yang-data+json'}
+ip = {}
 
 
 # Function to retrieve the list of interfaces on a device
@@ -68,25 +69,35 @@ def get_configured_interfaces(url_base, username, password):
 # Used to configure the IP address on an interface
 def configure_ip_address(url_base, interface, ip, username, password):
     # RESTCONF URL for specific interface
-    url = url_base + "/interface={i}".format(i=interface)
+    url = url_base + "/interface={i}/config/".format(i=interface)
+    prefix = get_prefix(ip["mask"])
 
     # Create the data payload to reconfigure IP address
     # Need to use OrderedDicts to maintain the order of elements
-    data = OrderedDict([('openconfig-interfaces:interface',
-              OrderedDict([
-                            ('name', interface),
-                            ('type', 'iana-if-type:ethernetCsmacd'),
-                            ('ietf-ip:ipv4',
-                                OrderedDict([
-                                  ('address', [OrderedDict([
-                                      ('ip', ip["address"]),
-                                      ('netmask', ip["mask"])
-                                  ])]
-                                  )
-                                ])
-                            ),
-                          ])
-                        )])
+    data = OrderedDict([
+        ('config', OrderedDict([
+            ('name', interface),
+            ('type', 'iana-if-type:ethernetCsmacd')
+        ])),
+        ('subinterfaces', OrderedDict([
+            ('subinterface', OrderedDict([
+                ('index', 0),
+                ('openconfig-if-ip:ipv4', OrderedDict([
+                    ('addresses', OrderedDict([
+                        ('address', OrderedDict([
+                            ('ip', ip["address"]),
+                            ('config', OrderedDict([
+                                ('ip', ip["address"]),
+                                ('prefix-length', prefix)
+                            ]))
+                        ]))
+                    ]))
+                ])),
+            ]))
+        ]))
+    ])
+
+    print(json.dumps(data, indent=4, default=str))
 
     # Use PUT request to update data
     try:
@@ -157,17 +168,20 @@ def interface_selection(interfaces, mgmt_if):
 
     return(sel)
 
+# Given a netmask, get the prefix length
+def get_prefix(mask):
+    prefix = sum([bin(int(x)).count('1') for x in mask.split('.')])
+    return prefix
 
 # Asks the user to provide an IP address and Mask.
 def get_ip_info(cidr):
     # Ask User for IP and Mask
-    ip = {}
     try:
         if cidr:
             ipa_t = input("What IP address/prefixlen do you want to set? ")
             ipi = ipaddress.ip_interface(ipa_t)
             ip["address"] = ipi.ip.compressed
-            ip["mask"] = ipi.netmask.compressed
+            ip["prefixlen"] = ipi.prefixlen.compressed
         else:
             ipa_t = input("What IP address do you want to set? ")
             ipi = ipaddress.ip_interface(ipa_t)
