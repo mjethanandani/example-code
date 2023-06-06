@@ -1,0 +1,2055 @@
+{
+	"info": {
+		"_postman_id": "65bd56ce-bba4-409e-bf43-af93022c9714",
+		"name": "ArcOS REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3404115"
+	},
+	"item": [
+		{
+			"name": "GET mount leaf3",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.25.4.10:8009/restconf/data/openconfig-system:system/arcos-openconfig-system-augments:version/state/product-name",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"10"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-system:system",
+						"arcos-openconfig-system-augments:version",
+						"state",
+						"product-name"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "Get entire config",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8181/rests/data/network-topology:network-topology/topology=uniconfig/node=arc1/configuration",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8181",
+					"path": [
+						"rests",
+						"data",
+						"network-topology:network-topology",
+						"topology=uniconfig",
+						"node=arc1",
+						"configuration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get entire config from Leaf1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+xml"
+					}
+				],
+				"url": {
+					"raw": "https://10.27.102.18:8009/restconf/data?content=config",
+					"protocol": "https",
+					"host": [
+						"10",
+						"27",
+						"102",
+						"18"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "config"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Interface",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.25.4.8:8009/restconf/data/openconfig-interfaces:interfaces",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"8"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "PUT interface IP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+xml",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    <subinterfaces>\n        <subinterface>\n            <index>0</index>\n            <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                <addresses>\n                    <address>\n                        <ip>10.10.10.10</ip>\n                        <config>\n                            <ip>10.10.10.10</ip>\n                            <prefix-length>24</prefix-length>\n                        </config>\n                    </address>\n                </addresses>\n            </ipv4>\n        </subinterface>\n    </subinterfaces>\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://10.25.4.8:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=swp2/subinterfaces",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"8"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"openconfig-interfaces:interface=swp2",
+						"subinterfaces"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT Interface",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<config>\n    <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n    <mtu>1450</mtu>\n    <name>ma1</name>\n    <description>Interface to the outside world</description>\n    <enabled>true</enabled>\n</config>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://10.7.100.73:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=ma1/config",
+							"protocol": "https",
+							"host": [
+								"10",
+								"7",
+								"100",
+								"73"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces",
+								"openconfig-interfaces:interface=ma1",
+								"config"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "PUT interface IP JSON",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"interface\" : {\n            \"name\" : \"swp2\",\n            \"config\" : {\n                \"name\" : \"swp2\",\n                \"type\" : \"ethernetCsmacd\",\n                \"mtu\" : \"1460\"\n            },\n            \"subinterfaces\" : {\n                \"subinterface\" : {\n                    \"index\" : \"0\",\n                    \"openconfig-if-ip:ipv4\" : {\n                        \"addresses\" : {\n                            \"address\" : {\n                                \"ip\" : \"10.10.10.10\",\n                                \"config\" : {\n                                    \"ip\" :\"10.10.10.10\",\n                                    \"prefix-length\" : \"24\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://10.25.4.8:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=swp2/",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"8"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"openconfig-interfaces:interface=swp2",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT Interface",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<config>\n    <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n    <mtu>1450</mtu>\n    <name>ma1</name>\n    <description>Interface to the outside world</description>\n    <enabled>true</enabled>\n</config>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://10.7.100.73:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=ma1/config",
+							"protocol": "https",
+							"host": [
+								"10",
+								"7",
+								"100",
+								"73"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces",
+								"openconfig-interfaces:interface=ma1",
+								"config"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "PUT interface using JSON",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"config\" : {\n            \"name\" : \"swp2\",\n            \"type\" : \"ethernetCsmacd\",\n            \"mtu\" : \"1470\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://10.25.4.8:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=swp2/config/",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"8"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"openconfig-interfaces:interface=swp2",
+						"config",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT Interface",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<config>\n    <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n    <mtu>1450</mtu>\n    <name>ma1</name>\n    <description>Interface to the outside world</description>\n    <enabled>true</enabled>\n</config>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://10.7.100.73:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=ma1/config",
+							"protocol": "https",
+							"host": [
+								"10",
+								"7",
+								"100",
+								"73"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces",
+								"openconfig-interfaces:interface=ma1",
+								"config"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "GET network instances",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "14u2crack",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.9.206.2:8009/restconf/data/openconfig-network-instance:network-instances",
+					"protocol": "https",
+					"host": [
+						"10",
+						"9",
+						"206",
+						"2"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-network-instance:network-instances"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET network instance",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "14u2crack",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.9.206.2:8009/restconf/data/openconfig-network-instance:network-instances/network-instance=default",
+					"protocol": "https",
+					"host": [
+						"10",
+						"9",
+						"206",
+						"2"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-network-instance:network-instances",
+						"network-instance=default"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET protocol",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "14u2crack",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.9.206.2:8009/restconf/data/openconfig-network-instance:network-instances/network-instance=default/protocols/protocol",
+					"protocol": "https",
+					"host": [
+						"10",
+						"9",
+						"206",
+						"2"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-network-instance:network-instances",
+						"network-instance=default",
+						"protocols",
+						"protocol"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET PSU from Leaf1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.25.4.6:8009/restconf/data/openconfig-platform:components/component=psu1/power-supply",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"6"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-platform:components",
+						"component=psu1",
+						"power-supply"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET swp2 from Leaf1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.25.4.6:8009/restconf/data/openconfig-interfaces:interfaces/interface=swp2",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"6"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=swp2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET swp2 effective speed from Leaf1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.25.4.6:8009/restconf/data/openconfig-interfaces:interfaces/interface=swp2/openconfig-if-ethernet:ethernet/state/effective-speed",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"6"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=swp2",
+						"openconfig-if-ethernet:ethernet",
+						"state",
+						"effective-speed"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET swp2 oper-state from Leaf1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.25.4.6:8009/restconf/data/openconfig-interfaces:interfaces/interface=swp2",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"6"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=swp2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET bond1 load-interval from Leaf3",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.25.4.10:8009/restconf/data/openconfig-interfaces:interfaces/interface=bond1/state/arcos-openconfig-interfaces-augments:load-interval",
+					"protocol": "https",
+					"host": [
+						"10",
+						"25",
+						"4",
+						"10"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"interface=bond1",
+						"state",
+						"arcos-openconfig-interfaces-augments:load-interval"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET BGP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "14u2crack",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.9.206.2:8009/restconf/data/openconfig-network-instance:network-instances/network-instance=default/protocols/protocol",
+					"protocol": "https",
+					"host": [
+						"10",
+						"9",
+						"206",
+						"2"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-network-instance:network-instances",
+						"network-instance=default",
+						"protocols",
+						"protocol"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Interface Config",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:55 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "\n<interfaces xmlns=\"http://openconfig.net/yang/interfaces\"  xmlns:oc-if=\"http://openconfig.net/yang/interfaces\">\n    <interface>\n        <name>ma1</name>\n        <config>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n        </config>\n        <state>\n            <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n            <mtu>1450</mtu>\n            <name>ma1</name>\n            <description>Interface to the outside world</description>\n            <enabled>true</enabled>\n            <ifindex>4</ifindex>\n            <admin-status>UP</admin-status>\n            <oper-status>UP</oper-status>\n            <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n            <counters>\n                <in-octets>1812209</in-octets>\n                <in-unicast-pkts>18678</in-unicast-pkts>\n                <in-broadcast-pkts>0</in-broadcast-pkts>\n                <in-multicast-pkts>3519</in-multicast-pkts>\n                <in-discards>0</in-discards>\n                <in-errors>0</in-errors>\n                <in-unknown-protos>0</in-unknown-protos>\n                <out-octets>252759</out-octets>\n                <out-unicast-pkts>927</out-unicast-pkts>\n                <out-broadcast-pkts>0</out-broadcast-pkts>\n                <out-multicast-pkts>0</out-multicast-pkts>\n                <out-discards>0</out-discards>\n                <out-errors>0</out-errors>\n                <in-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2232</in-bits-rate>\n                <in-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.23 kbps</in-bits-rate-brief>\n                <in-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">3</in-pkts-rate>\n                <out-bits-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2512</out-bits-rate>\n                <out-bits-rate-brief xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">2.51 kbps</out-bits-rate-brief>\n                <out-pkts-rate xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">1</out-pkts-rate>\n                <errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                    <fcs-error>0</fcs-error>\n                    <align-error>0</align-error>\n                    <symbol-error>0</symbol-error>\n                    <runt-pkts>0</runt-pkts>\n                </errors>\n                <in-ipv4-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-ipv4-discards>\n                <in-stp-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-stp-discards>\n                <in-vlan-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-vlan-discards>\n                <in-tcam-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-tcam-discards>\n                <in-policy-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-policy-discards>\n                <carrier-transitions xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">10</carrier-transitions>\n                <giant-pkts xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</giant-pkts>\n                <in-mtu-exceeded-discards xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</in-mtu-exceeded-discards>\n            </counters>\n            <load-interval xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">30</load-interval>\n            <fec xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">fec-none</fec>\n            <fec-corrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-corrected-errors>\n            <fec-uncorrected-errors xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</fec-uncorrected-errors>\n            <speed-group xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">0</speed-group>\n            <time-elapsed-since-last-change xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">00:00:37</time-elapsed-since-last-change>\n            <dynamic xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">\n                <ip>10.7.100.73</ip>\n                <prefix-length>16</prefix-length>\n                <ipv6-link-local>fe80::a00:27ff:febe:9a04</ipv6-link-local>\n            </dynamic>\n        </state>\n        <subinterfaces>\n            <subinterface>\n                <index>0</index>\n                <state>\n                    <index>0</index>\n                    <name>ma1</name>\n                    <description>Interface to the outside world</description>\n                    <enabled>true</enabled>\n                    <ifindex>4</ifindex>\n                    <admin-status>UP</admin-status>\n                    <oper-status>UP</oper-status>\n                    <last-change>2022-08-02T20:16:17.917905-00:00</last-change>\n                    <counters>\n                        <in-octets>1812209</in-octets>\n                        <in-unicast-pkts>18678</in-unicast-pkts>\n                        <in-broadcast-pkts>0</in-broadcast-pkts>\n                        <in-multicast-pkts>3519</in-multicast-pkts>\n                        <in-discards>0</in-discards>\n                        <in-errors>0</in-errors>\n                        <in-unknown-protos>0</in-unknown-protos>\n                        <out-octets>252759</out-octets>\n                        <out-unicast-pkts>927</out-unicast-pkts>\n                        <out-broadcast-pkts>0</out-broadcast-pkts>\n                        <out-multicast-pkts>0</out-multicast-pkts>\n                        <out-discards>0</out-discards>\n                        <out-errors>0</out-errors>\n                    </counters>\n                    <network-instance xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/augments\">management</network-instance>\n                </state>\n                <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <config>\n                        <enabled>true</enabled>\n                    </config>\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                </ipv4>\n                <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                    <state>\n                        <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                    </state>\n                    <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                        <state>\n                            <interval>600</interval>\n                            <lifetime>1800</lifetime>\n                            <suppress>false</suppress>\n                            <virtual-router-only>false</virtual-router-only>\n                            <managed-config-flag>false</managed-config-flag>\n                            <other-config-flag>false</other-config-flag>\n                        </state>\n                    </router-advertisement>\n                </ipv6>\n            </subinterface>\n        </subinterfaces>\n        <ethernet xmlns=\"http://openconfig.net/yang/interfaces/ethernet\">\n            <state>\n                <mac-address>08:00:27:BE:9A:04</mac-address>\n                <auto-negotiate>false</auto-negotiate>\n                <port-speed>SPEED_UNKNOWN</port-speed>\n                <hw-mac-address>08:00:27:BE:9A:04</hw-mac-address>\n                <effective-speed>1000</effective-speed>\n            </state>\n        </ethernet>\n    </interface>\n</interfaces>"
+				}
+			]
+		},
+		{
+			"name": "GET All Datastore from  r1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YouReallyNeedToChangeThis",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://172.17.0.3:8009/restconf/data?content=config&with-defaults=report-all",
+					"protocol": "https",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"3"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "config"
+						},
+						{
+							"key": "with-defaults",
+							"value": "report-all"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET All Datastores",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://172.17.0.3:8009/restconf/data?content=config&with-defaults=report-all",
+							"protocol": "https",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data"
+							],
+							"query": [
+								{
+									"key": "content",
+									"value": "config"
+								},
+								{
+									"key": "with-defaults",
+									"value": "report-all"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 19:55:21 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 19:53:51 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-325052-414542\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/yang-data+xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": "<data xmlns=\"urn:ietf:params:xml:ns:yang:ietf-restconf\">\n    <hardware xmlns=\"http://yang.arrcus.com/arcos/hardware\">\n        <config>\n            <common>\n                <ecmp>\n                    <hash-fields-ipv4>\n                        <src-ip>true</src-ip>\n                        <dst-ip>true</dst-ip>\n                        <src-port>true</src-port>\n                        <dst-port>true</dst-port>\n                        <proto>true</proto>\n                    </hash-fields-ipv4>\n                    <hash-fields-ipv6>\n                        <src-ip>true</src-ip>\n                        <dst-ip>true</dst-ip>\n                        <src-port>true</src-port>\n                        <dst-port>true</dst-port>\n                    </hash-fields-ipv6>\n                    <hash-fields-l2>\n                        <vlan>true</vlan>\n                        <eth-type>true</eth-type>\n                        <src-mac>true</src-mac>\n                        <dst-mac>true</dst-mac>\n                    </hash-fields-l2>\n                </ecmp>\n            </common>\n        </config>\n    </hardware>\n    <system-information xmlns=\"http://yang.arrcus.com/arcos/system-information\">\n        <version>aminor:Jul_17_22:5_36_PM [release] 2022-07-17 17:36:24</version>\n    </system-information>\n    <interfaces xmlns=\"http://openconfig.net/yang/interfaces\">\n        <interface>\n            <name>ma1</name>\n            <config>\n                <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n                <mtu>1500</mtu>\n                <name>ma1</name>\n                <enabled>true</enabled>\n            </config>\n            <subinterfaces>\n                <subinterface>\n                    <index>0</index>\n                    <config>\n                        <index>0</index>\n                        <enabled>true</enabled>\n                    </config>\n                    <ipv4 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                        <config>\n                            <enabled>true</enabled>\n                            <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                        </config>\n                    </ipv4>\n                    <ipv6 xmlns=\"http://openconfig.net/yang/interfaces/ip\">\n                        <config>\n                            <enabled>true</enabled>\n                            <neighbor-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">14400</neighbor-timeout>\n                        </config>\n                        <router-advertisement xmlns=\"http://yang.arrcus.com/arcos/openconfig/interfaces/ip/augments\">\n                            <config>\n                                <interval>600</interval>\n                                <suppress>false</suppress>\n                                <virtual-router-only>false</virtual-router-only>\n                                <managed-config-flag>false</managed-config-flag>\n                                <other-config-flag>false</other-config-flag>\n                            </config>\n                        </router-advertisement>\n                    </ipv6>\n                </subinterface>\n            </subinterfaces>\n        </interface>\n    </interfaces>\n    <lldp xmlns=\"http://openconfig.net/yang/lldp\">\n        <interfaces>\n            <interface>\n                <name>ma1</name>\n                <config>\n                    <name>ma1</name>\n                    <enabled>true</enabled>\n                </config>\n            </interface>\n        </interfaces>\n    </lldp>\n    <network-instances xmlns=\"http://openconfig.net/yang/network-instance\">\n        <network-instance>\n            <name>default</name>\n            <config>\n                <name>default</name>\n                <type xmlns:oc-ni-types=\"http://openconfig.net/yang/network-instance-types\">oc-ni-types:L3VRF</type>\n            </config>\n            <mpls>\n                <global>\n                    <config>\n                        <null-label xmlns:oc-mplst=\"http://openconfig.net/yang/mpls-types\">oc-mplst:IMPLICIT</null-label>\n                        <ttl-propagation>true</ttl-propagation>\n                        <icmp-tunnelling xmlns=\"http://yang.arrcus.com/arcos/openconfig/network-instance/augments\">true</icmp-tunnelling>\n                    </config>\n                </global>\n                <signaling-protocols>\n                    <ldp>\n                        <global>\n                            <fec-filter xmlns=\"http://yang.arrcus.com/arcos/openconfig/network-instance/augments\">\n                                <config>\n                                    <default-export-policy>REJECT_ROUTE</default-export-policy>\n                                </config>\n                            </fec-filter>\n                        </global>\n                    </ldp>\n                </signaling-protocols>\n            </mpls>\n            <srv6 xmlns=\"http://yang.arrcus.com/arcos/srv6\">\n                <encapsulation>\n                    <config>\n                        <ip-ttl-propagation>false</ip-ttl-propagation>\n                        <hop-limit>255</hop-limit>\n                    </config>\n                </encapsulation>\n            </srv6>\n        </network-instance>\n        <network-instance>\n            <name>management</name>\n            <config>\n                <name>management</name>\n                <type xmlns:oc-ni-types=\"http://openconfig.net/yang/network-instance-types\">oc-ni-types:L3VRF</type>\n            </config>\n            <interfaces>\n                <interface>\n                    <id>ma1</id>\n                    <config>\n                        <id>ma1</id>\n                        <interface>ma1</interface>\n                        <subinterface>0</subinterface>\n                    </config>\n                </interface>\n            </interfaces>\n        </network-instance>\n    </network-instances>\n    <relay-agent xmlns=\"http://openconfig.net/yang/relay-agent\">\n        <dhcp>\n            <agent-information-option>\n                <config>\n                    <enable>false</enable>\n                </config>\n            </agent-information-option>\n        </dhcp>\n    </relay-agent>\n    <stp xmlns=\"http://openconfig.net/yang/spanning-tree\">\n        <enabled-protocol xmlns:oc-stp-types=\"http://openconfig.net/yang/spanning-tree/types\">oc-stp-types:RAPID_PVST</enabled-protocol>\n    </stp>\n    <system xmlns=\"http://openconfig.net/yang/system\">\n        <config>\n            <login-banner>ArcOS (c) Arrcus, Inc.</login-banner>\n        </config>\n        <grpc-server>\n            <config>\n                <enable>false</enable>\n                <port>9339</port>\n                <metadata-authentication>true</metadata-authentication>\n                <permit-root-login xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">false</permit-root-login>\n            </config>\n            <tls xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n                <config>\n                    <certificate-file>/mnt/onl/config/pki/certificate</certificate-file>\n                    <key-file>/mnt/onl/config/pki/key.pem</key-file>\n                </config>\n            </tls>\n        </grpc-server>\n        <ssh-server>\n            <config>\n                <enable>true</enable>\n                <protocol-version>V2</protocol-version>\n                <timeout>65535</timeout>\n                <session-limit>255</session-limit>\n                <max-auth-tries xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">6</max-auth-tries>\n                <permit-root-login xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">true</permit-root-login>\n                <login-timeout xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">120</login-timeout>\n                <port xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">22</port>\n                <pubkey-authentication xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">true</pubkey-authentication>\n            </config>\n            <sftp xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n                <config>\n                    <enable>false</enable>\n                </config>\n            </sftp>\n        </ssh-server>\n        <logging>\n            <auditLog xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n                <syslog>\n                    <enabled>false</enabled>\n                </syslog>\n            </auditLog>\n            <config xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n                <timestamp-format xmlns:arc-sys-log-types=\"http://yang.arrcus.com/arcos/system/logging/types\">arc-sys-log-types:TRADITIONAL</timestamp-format>\n            </config>\n            <monitor xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n                <config>\n                    <severity>ERROR</severity>\n                </config>\n            </monitor>\n            <component xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n                <ADJMGR>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </ADJMGR>\n                <BFD>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </BFD>\n                <BGP>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </BGP>\n                <DPAL>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </DPAL>\n                <FIB>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </FIB>\n                <IFMGR>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </IFMGR>\n                <ISIS>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </ISIS>\n                <OSPF>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </OSPF>\n                <OSPF3>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </OSPF3>\n                <PLTMGR>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </PLTMGR>\n                <L2RIB>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </L2RIB>\n                <RIB>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </RIB>\n                <EVENTMGR>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </EVENTMGR>\n                <GNMI>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </GNMI>\n                <SIDMGR>\n                    <config>\n                        <severity>DEBUG</severity>\n                    </config>\n                </SIDMGR>\n            </component>\n        </logging>\n        <aaa>\n            <authentication>\n                <admin-user>\n                    <config>\n                        <admin-password>$6$WzPzp43xJaYUI/oQ$MHhDWkew893obZJ6ro/UbwiuOsapOOe7HN7DTKRAlcVaFNdfIi2VQzk8eUm1Caeb1F0v8tLqF38USEga5lwSq.</admin-password>\n                    </config>\n                </admin-user>\n            </authentication>\n        </aaa>\n        <ports xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n            <console-port>\n                <config>\n                    <permit-root-login>true</permit-root-login>\n                    <permit-non-root-login>true</permit-non-root-login>\n                    <baud-rate>115200</baud-rate>\n                    <idle-timeout>300</idle-timeout>\n                </config>\n            </console-port>\n        </ports>\n        <cli xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n            <config>\n                <oper-prompt>\\u@\\H\\M# </oper-prompt>\n                <config-prompt>\\u@\\H(\\m)# </config-prompt>\n            </config>\n        </cli>\n        <interface-global xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n            <config>\n                <load-interval>30</load-interval>\n            </config>\n        </interface-global>\n        <maintenance-mode xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n            <config>\n                <activation-timer>300</activation-timer>\n                <target-traffic-absolute>10</target-traffic-absolute>\n                <target-traffic-percentage>10</target-traffic-percentage>\n                <enable>false</enable>\n            </config>\n        </maintenance-mode>\n        <netconf-server xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n            <config>\n                <enable>true</enable>\n            </config>\n            <transport>\n                <ssh>\n                    <config>\n                        <enable>true</enable>\n                        <port>830</port>\n                        <timeout>0</timeout>\n                    </config>\n                </ssh>\n            </transport>\n        </netconf-server>\n        <restconf-server xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n            <config>\n                <enable>true</enable>\n                <port>8009</port>\n                <transport-security>true</transport-security>\n            </config>\n            <tls>\n                <config>\n                    <certificate-file>/mnt/onl/config/pki/certificate</certificate-file>\n                    <key-file>/mnt/onl/config/pki/key.pem</key-file>\n                </config>\n            </tls>\n        </restconf-server>\n        <snmp-server xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">\n            <config>\n                <enable>false</enable>\n                <port>161</port>\n                <engine-id>SYSTEM_MAC_ADDRESS</engine-id>\n            </config>\n        </snmp-server>\n    </system>\n    <telemetry-system xmlns=\"http://openconfig.net/yang/telemetry\">\n        <global xmlns=\"http://yang.arrcus.com/arcos/openconfig/telemetry/augments\">\n            <config>\n                <status>off</status>\n            </config>\n        </global>\n    </telemetry-system>\n</data>"
+				}
+			]
+		},
+		{
+			"name": "PUT for r1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "YouReallyNeedToChangeThis",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+xml",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<config>\n    <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n    <mtu>1450</mtu>\n    <name>eth0</name>\n    <description>Interface to the outside world</description>\n    <enabled>true</enabled>\n</config>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://172.17.0.3:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=eth0/config",
+					"protocol": "https",
+					"host": [
+						"172",
+						"17",
+						"0",
+						"3"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data",
+						"openconfig-interfaces:interfaces",
+						"openconfig-interfaces:interface=eth0",
+						"config"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT Interface",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<config>\n    <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n    <mtu>1450</mtu>\n    <name>ma1</name>\n    <description>Interface to the outside world</description>\n    <enabled>true</enabled>\n</config>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://10.7.100.73:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=ma1/config",
+							"protocol": "https",
+							"host": [
+								"10",
+								"7",
+								"100",
+								"73"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces",
+								"openconfig-interfaces:interface=ma1",
+								"config"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "PUT for BGP change",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "arrcus",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+xml",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/yang-data+xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<data xmlns=\"urn:ietf:params:xml:ns:yang:ietf-restconf\">\n  <system xmlns=\"http://openconfig.net/yang/system\">\n    <config>\n      <login-banner>ArcOS (c) Arrcus, Inc.</login-banner>\n    </config>\n    <ssh-server>\n      <config>\n        <enable>true</enable>\n        <permit-root-login xmlns=\"http://yang.arrcus.com/arcos/openconfig/system/augments\">true</permit-root-login>\n      </config>\n    </ssh-server>\n    <aaa>\n      <authentication>\n        <admin-user>\n          <config>\n            <admin-password>$6$X3IhSWcRD1KVZeRg$SWNU6Bmkek2/FILFZIysin1WtNJjqjXSKeNKddfX8EkUAKXYaYyOvJuy6zCcdGaTDh5c1OEqkmeC7DI0MAEEF.</admin-password>\n          </config>\n        </admin-user>\n      </authentication>\n    </aaa>\n</system>\n<network-instances xmlns=\"http://openconfig.net/yang/network-instance\">\n    <network-instance>\n      <name>default</name>\n      <config>\n        <name>default</name>\n      </config>\n      <protocols>\n        <protocol>\n          <identifier xmlns:oc-pol-types=\"http://openconfig.net/yang/policy-types\">oc-pol-types:BGP</identifier>\n          <name>default</name>\n          <config>\n            <identifier xmlns:oc-pol-types=\"http://openconfig.net/yang/policy-types\">oc-pol-types:BGP</identifier>\n            <name>default</name>\n          </config>\n          <bgp>\n            <global>\n              <config>\n                <as>65100</as>\n                <router-id>10.0.255.10</router-id>\n                <sid-allocation-mode xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\" xmlns:arc-oc-bgp-types=\"http://yang.arrcus.com/arcos/openconfig/bgp/types\">arc-oc-bgp-types:INSTANCE_SID</sid-allocation-mode>\n              </config>\n              <afi-safis>\n                <afi-safi>\n                  <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:IPV4_UNICAST</afi-safi-name>\n                  <config>\n                    <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:IPV4_UNICAST</afi-safi-name>\n                  </config>\n                  <ipv4-unicast>\n                    <networks xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                      <network>\n                        <prefix>192.168.255.111/32</prefix>\n                        <config>\n                          <prefix>192.168.255.111/32</prefix>\n                        </config>\n                      </network>\n                    </networks>\n                  </ipv4-unicast>\n                </afi-safi>\n                <afi-safi>\n                  <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:L3VPN_IPV6_UNICAST</afi-safi-name>\n                  <config>\n                    <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:L3VPN_IPV6_UNICAST</afi-safi-name>\n                    <retain-route-target-all xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">true</retain-route-target-all>\n                  </config>\n                  <use-maximum-paths xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                    <config>\n                      <ebgp>\n                        <maximum-paths>32</maximum-paths>\n                      </ebgp>\n                      <ibgp>\n                        <maximum-paths>32</maximum-paths>\n                      </ibgp>\n                    </config>\n                  </use-maximum-paths>\n                  <telemetry xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                    <config>\n                      <neighbor-stream-enabled>true</neighbor-stream-enabled>\n                      <prefix-stream-enabled>true</prefix-stream-enabled>\n                    </config>\n                  </telemetry>\n                </afi-safi>\n                <afi-safi>\n                  <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:IPV6_UNICAST</afi-safi-name>\n                  <config>\n                    <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:IPV6_UNICAST</afi-safi-name>\n                  </config>\n                  <ipv6-unicast>\n                    <networks xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                      <network>\n                        <prefix>2001:10:0:255::1/128</prefix>\n                        <config>\n                          <prefix>2001:10:0:255::1/128</prefix>\n                        </config>\n                      </network>\n                    </networks>\n                  </ipv6-unicast>\n                  <use-maximum-paths xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                    <config>\n                      <ebgp>\n                        <maximum-paths>32</maximum-paths>\n                      </ebgp>\n                      <ibgp>\n                        <maximum-paths>32</maximum-paths>\n                      </ibgp>\n                    </config>\n                  </use-maximum-paths>\n                  <telemetry xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                    <config>\n                      <neighbor-stream-enabled>true</neighbor-stream-enabled>\n                      <prefix-stream-enabled>true</prefix-stream-enabled>\n                    </config>\n                  </telemetry>\n                </afi-safi>\n                <afi-safi>\n                  <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:L3VPN_IPV4_UNICAST</afi-safi-name>\n                  <config>\n                    <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:L3VPN_IPV4_UNICAST</afi-safi-name>\n                    <retain-route-target-all xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">true</retain-route-target-all>\n                  </config>\n                  <use-maximum-paths xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                    <config>\n                      <ebgp>\n                        <maximum-paths>32</maximum-paths>\n                      </ebgp>\n                      <ibgp>\n                        <maximum-paths>32</maximum-paths>\n                      </ibgp>\n                    </config>\n                  </use-maximum-paths>\n                  <telemetry xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                    <config>\n                      <neighbor-stream-enabled>true</neighbor-stream-enabled>\n                      <prefix-stream-enabled>true</prefix-stream-enabled>\n                    </config>\n                  </telemetry>\n                </afi-safi>\n              </afi-safis>\n              <srv6 xmlns=\"http://yang.arrcus.com/arcos/openconfig/bgp/augments\">\n                <config>\n                  <locator>default</locator>\n                </config>\n              </srv6>\n            </global>\n            <neighbors>\n              <neighbor>\n                <neighbor-address>10.0.255.5</neighbor-address>\n                <config>\n                  <neighbor-address>10.0.255.5</neighbor-address>\n                  <peer-as>65100</peer-as>\n                </config>\n                <transport>\n                  <config>\n                    <local-address>10.0.255.10</local-address>\n                  </config>\n                </transport>\n                <afi-safis>\n                  <afi-safi>\n                    <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:L3VPN_IPV4_UNICAST</afi-safi-name>\n                    <config>\n                      <afi-safi-name xmlns:oc-bgp-types=\"http://openconfig.net/yang/bgp-types\">oc-bgp-types:L3VPN_IPV4_UNICAST</afi-safi-name>\n                    </config>\n                  </afi-safi>\n                </afi-safis>\n              </neighbor>\n            </neighbors>\n          </bgp>\n        </protocol>\n      </protocols>\n      <srv6 xmlns=\"http://yang.arrcus.com/arcos/srv6\">\n        <locator>\n          <name>default</name>\n          <config>\n            <locator-node-length>24</locator-node-length>\n            <prefix>2001:10:0:10::/64</prefix>\n          </config>\n        </locator>\n      </srv6>\n    </network-instance>\n        <network-instance>\n      <name>management</name>\n      <config>\n        <name>management</name>\n      </config>\n    </network-instance>\n  </network-instances>\n</data>\n\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.122:8009/restconf/data",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"122"
+					],
+					"port": "8009",
+					"path": [
+						"restconf",
+						"data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PUT Interface",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/yang-data+xml",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<config>\n    <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n    <mtu>1450</mtu>\n    <name>ma1</name>\n    <description>Interface to the outside world</description>\n    <enabled>true</enabled>\n</config>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://10.7.100.73:8009/restconf/data/openconfig-interfaces:interfaces/openconfig-interfaces:interface=ma1/config",
+							"protocol": "https",
+							"host": [
+								"10",
+								"7",
+								"100",
+								"73"
+							],
+							"port": "8009",
+							"path": [
+								"restconf",
+								"data",
+								"openconfig-interfaces:interfaces",
+								"openconfig-interfaces:interface=ma1",
+								"config"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 02 Aug 2022 20:16:15 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, no-cache, must-revalidate, proxy-revalidate"
+						},
+						{
+							"key": "Etag",
+							"value": "\"1658-326410-150857\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "PUT entire config (as per BGP L3 VPN SRv6 PDF)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"frinx-uniconfig-topology:configuration\": {\n        \"openconfig-interfaces:interfaces\": {\n            \"interface\": [\n                {\n                    \"name\": \"ma1\",\n                    \"subinterfaces\": {\n                        \"subinterface\": [\n                            {\n                                \"index\": 0\n                            }\n                        ]\n                    },\n                    \"config\": {\n                        \"enabled\": true,\n                        \"type\": \"iana-if-type:ethernetCsmacd\",\n                        \"mtu\": 1500,\n                        \"name\": \"ma1\"\n                    }\n                },\n                {\n                    \"name\": \"swp3\",\n                    \"subinterfaces\": {\n                        \"subinterface\": [\n                            {\n                                \"index\": 0,\n                                \"config\": {\n                                    \"enabled\": true\n                                }\n                            }\n                        ]\n                    },\n                    \"config\": {\n                        \"enabled\": true,\n                        \"type\": \"iana-if-type:ethernetCsmacd\",\n                        \"name\": \"swp3\"\n                    }\n                },\n                {\n                    \"name\": \"loopback1\",\n                    \"subinterfaces\": {\n                        \"subinterface\": [\n                            {\n                                \"index\": 0,\n                                \"config\": {\n                                    \"enabled\": true\n                                }\n                            }\n                        ]\n                    },\n                    \"config\": {\n                        \"type\": \"iana-if-type:softwareLoopback\",\n                        \"name\": \"loopback1\"\n                    }\n                }\n            ]\n        },\n        \"openconfig-lldp:lldp\": {\n            \"interfaces\": {\n                \"interface\": [\n                    {\n                        \"name\": \"ma1\",\n                        \"config\": {\n                            \"name\": \"ma1\"\n                        }\n                    },\n                    {\n                        \"name\": \"swp3\",\n                        \"config\": {\n                            \"name\": \"swp3\"\n                        }\n                    }\n                ]\n            }\n        },\n        \"openconfig-network-instance:network-instances\": {\n            \"network-instance\": [\n                {\n                    \"name\": \"CE-VRF\",\n                    \"config\": {\n                        \"type\": \"openconfig-network-instance-types:L3VRF\",\n                        \"name\": \"CE-VRF\"\n                    },\n                    \"interfaces\": {\n                        \"interface\": [\n                            {\n                                \"id\": \"swp3\",\n                                \"config\": {\n                                    \"id\": \"swp3\",\n                                    \"subinterface\": 0,\n                                    \"interface\": \"swp3\"\n                                }\n                            },\n                            {\n                                \"id\": \"loopback1\",\n                                \"config\": {\n                                    \"id\": \"loopback1\",\n                                    \"subinterface\": 0,\n                                    \"interface\": \"loopback1\"\n                                }\n                            }\n                        ]\n                    },\n                    \"protocols\": {\n                        \"protocol\": [\n                            {\n                                \"identifier\": \"openconfig-policy-types:BGP\",\n                                \"name\": \"CE-VRF\",\n                                \"bgp\": {\n                                    \"global\": {\n                                        \"afi-safis\": {\n                                            \"afi-safi\": [\n                                                {\n                                                    \"afi-safi-name\": \"openconfig-bgp-types:IPV4_UNICAST\",\n                                                    \"arcos-openconfig-bgp-augments:use-maximum-paths\": {\n                                                        \"config\": {\n                                                            \"ebgp\": {\n                                                                \"maximum-paths\": 32\n                                                            },\n                                                            \"ibgp\": {\n                                                                \"maximum-paths\": 32\n                                                            }\n                                                        }\n                                                    },\n                                                    \"arcos-openconfig-bgp-augments:rt-afi-safis\": {\n                                                        \"rt-afi-safi\": [\n                                                            {\n                                                                \"rt-afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV4_UNICAST\",\n                                                                \"config\": {\n                                                                    \"rt-afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV4_UNICAST\"\n                                                                },\n                                                                \"route-targets\": {\n                                                                    \"route-target\": [\n                                                                        {\n                                                                            \"route-target\": \"65100:1\",\n                                                                            \"route-target-type\": \"both\",\n                                                                            \"config\": {\n                                                                                \"route-target\": \"65100:1\",\n                                                                                \"route-target-type\": \"both\"\n                                                                            }\n                                                                        }\n                                                                    ]\n                                                                }\n                                                            }\n                                                        ]\n                                                    },\n                                                    \"config\": {\n                                                        \"afi-safi-name\": \"openconfig-bgp-types:IPV4_UNICAST\"\n                                                    }\n                                                },\n                                                {\n                                                    \"afi-safi-name\": \"openconfig-bgp-types:IPV6_UNICAST\",\n                                                    \"arcos-openconfig-bgp-augments:use-maximum-paths\": {\n                                                        \"config\": {\n                                                            \"ebgp\": {\n                                                                \"maximum-paths\": 32\n                                                            },\n                                                            \"ibgp\": {\n                                                                \"maximum-paths\": 32\n                                                            }\n                                                        }\n                                                    },\n                                                    \"arcos-openconfig-bgp-augments:rt-afi-safis\": {\n                                                        \"rt-afi-safi\": [\n                                                            {\n                                                                \"rt-afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV6_UNICAST\",\n                                                                \"config\": {\n                                                                    \"rt-afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV6_UNICAST\"\n                                                                },\n                                                                \"route-targets\": {\n                                                                    \"route-target\": [\n                                                                        {\n                                                                            \"route-target\": \"65100:1\",\n                                                                            \"route-target-type\": \"both\",\n                                                                            \"config\": {\n                                                                                \"route-target\": \"65100:1\",\n                                                                                \"route-target-type\": \"both\"\n                                                                            }\n                                                                        }\n                                                                    ]\n                                                                }\n                                                            }\n                                                        ]\n                                                    },\n                                                    \"config\": {\n                                                        \"afi-safi-name\": \"openconfig-bgp-types:IPV6_UNICAST\"\n                                                    }\n                                                }\n                                            ]\n                                        },\n                                        \"config\": {\n                                            \"arcos-openconfig-bgp-augments:sid-allocation-mode\": \"arcos-openconfig-bgp-types:INSTANCE_SID\",\n                                            \"arcos-openconfig-bgp-augments:route-distinguisher\": \"1.2.3.4:65100\"\n                                        }\n                                    },\n                                    \"neighbors\": {\n                                        \"neighbor\": [\n                                            {\n                                                \"neighbor-address\": \"31.1.3.2\",\n                                                \"transport\": {\n                                                    \"config\": {\n                                                        \"local-address\": \"31.1.3.1\"\n                                                    }\n                                                },\n                                                \"afi-safis\": {\n                                                    \"afi-safi\": [\n                                                        {\n                                                            \"afi-safi-name\": \"openconfig-bgp-types:IPV4_UNICAST\",\n                                                            \"config\": {\n                                                                \"afi-safi-name\": \"openconfig-bgp-types:IPV4_UNICAST\"\n                                                            }\n                                                        }\n                                                    ]\n                                                },\n                                                \"config\": {\n                                                    \"neighbor-address\": \"31.1.3.2\",\n                                                    \"peer-as\": 1\n                                                }\n                                            },\n                                            {\n                                                \"neighbor-address\": \"3001:db8:1:3::b\",\n                                                \"transport\": {\n                                                    \"config\": {\n                                                        \"local-address\": \"3001:db8:1:3::a\"\n                                                    }\n                                                },\n                                                \"afi-safis\": {\n                                                    \"afi-safi\": [\n                                                        {\n                                                            \"afi-safi-name\": \"openconfig-bgp-types:IPV6_UNICAST\",\n                                                            \"config\": {\n                                                                \"afi-safi-name\": \"openconfig-bgp-types:IPV6_UNICAST\"\n                                                            }\n                                                        }\n                                                    ]\n                                                },\n                                                \"config\": {\n                                                    \"neighbor-address\": \"3001:db8:1:3::b\",\n                                                    \"peer-as\": 1\n                                                }\n                                            }\n                                        ]\n                                    }\n                                },\n                                \"config\": {\n                                    \"name\": \"CE-VRF\",\n                                    \"identifier\": \"openconfig-policy-types:BGP\"\n                                }\n                            }\n                        ]\n                    }\n                },\n                {\n                    \"name\": \"default\",\n                    \"arcos-srv6:srv6\": {\n                        \"locator\": [\n                            {\n                                \"name\": \"my-locator\",\n                                \"config\": {\n                                    \"locator-node-length\": 24,\n                                    \"prefix\": \"cafe:0:1:1::/64\"\n                                }\n                            }\n                        ]\n                    },\n                    \"config\": {\n                        \"name\": \"default\"\n                    },\n                    \"protocols\": {\n                        \"protocol\": [\n                            {\n                                \"identifier\": \"openconfig-policy-types:BGP\",\n                                \"name\": \"default\",\n                                \"bgp\": {\n                                    \"global\": {\n                                        \"afi-safis\": {\n                                            \"afi-safi\": [\n                                                {\n                                                    \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV6_UNICAST\",\n                                                    \"arcos-openconfig-bgp-augments:use-maximum-paths\": {\n                                                        \"config\": {\n                                                            \"ebgp\": {\n                                                                \"maximum-paths\": 32\n                                                            },\n                                                            \"ibgp\": {\n                                                                \"maximum-paths\": 32\n                                                            }\n                                                        }\n                                                    },\n                                                    \"config\": {\n                                                        \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV6_UNICAST\",\n                                                        \"arcos-openconfig-bgp-augments:retain-route-target-all\": true\n                                                    }\n                                                },\n                                                {\n                                                    \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV4_UNICAST\",\n                                                    \"arcos-openconfig-bgp-augments:use-maximum-paths\": {\n                                                        \"config\": {\n                                                            \"ebgp\": {\n                                                                \"maximum-paths\": 32\n                                                            },\n                                                            \"ibgp\": {\n                                                                \"maximum-paths\": 32\n                                                            }\n                                                        }\n                                                    },\n                                                    \"config\": {\n                                                        \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV4_UNICAST\",\n                                                        \"arcos-openconfig-bgp-augments:retain-route-target-all\": true\n                                                    }\n                                                }\n                                            ]\n                                        },\n                                        \"arcos-openconfig-bgp-augments:srv6\": {\n                                            \"config\": {\n                                                \"locator\": \"my-locator\"\n                                            }\n                                        },\n                                        \"config\": {\n                                            \"arcos-openconfig-bgp-augments:sid-allocation-mode\": \"arcos-openconfig-bgp-types:PER_NEXTHOP\",\n                                            \"as\": 65100,\n                                            \"router-id\": \"55.5.1.1\"\n                                        }\n                                    },\n                                    \"neighbors\": {\n                                        \"neighbor\": [\n                                            {\n                                                \"neighbor-address\": \"2001:5555:5b::9\",\n                                                \"transport\": {\n                                                    \"config\": {\n                                                        \"local-address\": \"loopback0\"\n                                                    }\n                                                },\n                                                \"config\": {\n                                                    \"neighbor-address\": \"2001:5555:5b::9\",\n                                                    \"peer-group\": \"ARCRR\"\n                                                }\n                                            }\n                                        ]\n                                    },\n                                    \"peer-groups\": {\n                                        \"peer-group\": [\n                                            {\n                                                \"peer-group-name\": \"ARCRR\",\n                                                \"afi-safis\": {\n                                                    \"afi-safi\": [\n                                                        {\n                                                            \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV6_UNICAST\",\n                                                            \"arcos-openconfig-bgp-augments:add-paths\": {\n                                                                \"config\": {\n                                                                    \"send\": \"arcos-openconfig-bgp-types:ALL\",\n                                                                    \"receive\": true\n                                                                }\n                                                            },\n                                                            \"config\": {\n                                                                \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV6_UNICAST\"\n                                                            }\n                                                        },\n                                                        {\n                                                            \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV4_UNICAST\",\n                                                            \"arcos-openconfig-bgp-augments:extended-nexthop\": {\n                                                                \"config\": {\n                                                                    \"enable\": true\n                                                                }\n                                                            },\n                                                            \"arcos-openconfig-bgp-augments:add-paths\": {\n                                                                \"config\": {\n                                                                    \"send\": \"arcos-openconfig-bgp-types:ALL\",\n                                                                    \"receive\": true\n                                                                }\n                                                            },\n                                                            \"config\": {\n                                                                \"afi-safi-name\": \"openconfig-bgp-types:L3VPN_IPV4_UNICAST\"\n                                                            }\n                                                        }\n                                                    ]\n                                                },\n                                                \"config\": {\n                                                    \"peer-as\": 65100,\n                                                    \"peer-group-name\": \"ARCRR\"\n                                                }\n                                            }\n                                        ]\n                                    }\n                                },\n                                \"config\": {\n                                    \"name\": \"default\",\n                                    \"identifier\": \"openconfig-policy-types:BGP\"\n                                }\n                            }\n                        ]\n                    }\n                },\n                {\n                    \"name\": \"management\",\n                    \"config\": {\n                        \"name\": \"management\"\n                    },\n                    \"interfaces\": {\n                        \"interface\": [\n                            {\n                                \"id\": \"ma1\",\n                                \"config\": {\n                                    \"id\": \"ma1\",\n                                    \"subinterface\": 0,\n                                    \"interface\": \"ma1\"\n                                }\n                            }\n                        ]\n                    }\n                }\n            ]\n        },\n        \"arcos-platform:platform\": {\n            \"deployment-type\": \"arcos-platform:STANDALONE\",\n            \"asic\": \"arcos-platform:X86_64\",\n            \"form-factor\": \"FF_VIRTUAL\",\n            \"family\": \"arcos-platform:VIRTUAL\",\n            \"type\": \"arcos-platform:OS\"\n        },\n        \"arcos-system-information:system-information\": {\n            \"version\": \"4.3.1B [release] 2022-05-14 11:52:36\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8181/rests/data/network-topology:network-topology/topology=uniconfig/node=arc1/configuration",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8181",
+					"path": [
+						"rests",
+						"data",
+						"network-topology:network-topology",
+						"topology=uniconfig",
+						"node=arc1",
+						"configuration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
