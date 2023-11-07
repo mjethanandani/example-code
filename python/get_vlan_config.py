@@ -14,15 +14,10 @@ device_username = "root"
 device_password = "arrcus"
 
 # Construct the XML request for the <get> operation
-get_vlan_request = """
-<get-config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" 
-        xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-    <filter>
-        <vlans xmlns="http://openconfig.net/yang/vlan">
-            <vlan />
-        </vlans>
-    </filter>
-</get-config>
+get_vlan_request = f"""
+  <vlans xmlns="http://openconfig.net/yang/vlan">
+    <vlan />
+  </vlans>
 """
 
 def main():
@@ -38,7 +33,7 @@ def main():
     '''
     
     if len(sys.argv) < 2:
-      print ("Usage: python get_vlan.py host [port username password]")
+      print ("Usage: python get_vlan_config.py host [port username password]")
       sys.exit(1) 
        
     host = sys.argv[1] if len(sys.argv) > 1 else device_ip
@@ -57,7 +52,7 @@ def main():
             hostkey_verify=False,
     ) as m:
       # Retrieve the configuration using NETCONF
-      response = m.get_config(source='running')
+      response = m.get_config(source='running', filter=('subtree', get_vlan_request))
 
       # Extract the response as an XML element
       response_xml = response.data_ele
