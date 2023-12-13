@@ -6,6 +6,7 @@ import xmltodict
 from ncclient.xml_ import *
 import xml.dom.minidom
 import sys
+import argparse
 
 # Device connection parameters
 device_ip = "10.27.204.29"
@@ -129,7 +130,53 @@ cfg_bond = """
 </config>
 """
 
-def main():
+class EditConfig():
+
+    def bond(self, m):
+        with m.locked("candidate"):
+            m.edit_config(
+                target="candidate",
+                config=cfg_hostname,
+                default_operation="merge"
+            )
+            m.edit_config(
+                target="candidate",
+                config=cfg_bond,
+                default_operation="merge",
+                test_option="test-then-set",
+                error_option="rollback-on-error",
+            )
+            m.commit(
+                confirmed=True,
+                timeout=str(20),
+                persist=None,
+                persist_id=None
+            )
+
+def parse_args(sys_args):
+    usage = """
+    % edit [-h | --help] [options]
+
+    One of the options must be given.
+    """
+    # Create an instance of the parser
+    parser = argparse.ArgumentParser(description=usage)
+    parser.add_argument("-u", "--user", dest="username",
+                        default=device_username, help="username")
+    parser.add_argument("-p", "--password", dest="password",
+                        default=device_password, help="password")
+    parser.add_argument("--host", dest="host", default=device_ip,
+                      help="NETCONF server hostname")
+    parser.add_argument("--port", type=int, dest="port",
+                        default=device_port,
+                        help="NETCONF server SSH port")
+    parser.add_argument("--bond", action='store_true',
+                        help="Configure the bond interface")
+    args = parser.parse_args()
+    return (args)
+
+
+def main(sys, EditConfig, logger=None):
     '''
     This function tests the ability to edit a configuration over
     NETCONF. It takes one mandatory and three optional arguments.
@@ -138,38 +185,35 @@ def main():
     .param arg2: the port number of the NETCONF server (default 830)
     .param arg3: the username of the account on NETCONF server (default root)
     .param arg4: the password for the username (default 'arrcus')
+    .param arg5: test case that needs to be run
     .return: None.
     '''
     
-    if len(sys.argv) < 2:
-      print ("Usage: python edit_config.py host [port username password]")
-      sys.exit(1) 
-       
-    host = sys.argv[1] if len(sys.argv) > 1 else device_ip
-    port = sys.argv[2] if len(sys.argv) > 2 else device_port
-    username = sys.argv[3] if len(sys.argv) > 3 else device_username
-    password = sys.argv[4] if len(sys.argv) > 4 else device_password
+#  if len(sys.argv) < 2:
+#      print ("Usage: python edit_config.py host [port username password]
+#    sys.exit(1) 
 
-    with manager.connect(
-            host=host,
-            port=port,
-            username=username,
-            password=password,
-            device_params={"name": "default"},
-            allow_agent=False,
-            look_for_keys=False,
-            hostkey_verify=False,
-    ) as m:
-        with m.locked("candidate"):
-            m.edit_config(
-                target="candidate", config=cfg_hostname, default_operation="merge"
-            )
-            m.edit_config(
-                target="candidate",
-                config=cfg_bond,
-                default_operation="merge",
-            )
-            m.commit(confirmed=True, timeout=str(20), persist=None, persist_id=None)
+    args = parse_args(sys)
+    if logger:
+        logger.debug("edit_config.py: about to connect")
+    
+    try:
+        with manager.connect(
+                host=args.host,
+                port=args.port,
+                username=args.username,
+                password=args.password,
+                device_params={"name": "default"},
+                allow_agent=False,
+                look_for_keys=False,
+                hostkey_verify=False,
+        ) as m:
+            if args.bond:
+                EditConfig.bond(m)
+    except Exception as e:
+        print("An error occured:", str(e))
+            
 
 if __name__ == "__main__":
-  main()
+    editConfig = EditConfig()
+    main(sys.argv[1:], editConfig)
