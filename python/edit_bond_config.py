@@ -7,6 +7,12 @@ from ncclient.xml_ import *
 import xml.dom.minidom
 import sys
 import argparse
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename='/tmp/edit_config.log', level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Device connection parameters
 device_ip = "10.27.204.29"
@@ -19,7 +25,7 @@ cfg_hostname = """
         xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
   <system xmlns="http://openconfig.net/yang/system">
     <config>
-      <hostname>leaf2</hostname>   
+      <hostname>leaf1</hostname>   
     </config>
   </system>
 </config>
@@ -153,6 +159,27 @@ class EditConfig():
                 persist_id=None
             )
 
+    def hostname(self, m):
+        with m.locked("candidate"):
+            m.edit_config(
+                target="candidate", config=cfg_hostname,
+                default_operation="merge"
+            )
+            m.edit_config(
+                target="candidate",
+                config=cfg_hostname,
+                default_operation="merge",
+                test_option="test-then-set",
+                error_option="rollback-on-error",
+            )
+            m.commit(
+                confirmed=True,
+                timeout=str(20),
+                persist=None,
+                persist_id=None
+            )
+
+
 def parse_args(sys_args):
     usage = """
     % edit [-h | --help] [options]
@@ -172,6 +199,8 @@ def parse_args(sys_args):
                         help="NETCONF server SSH port")
     parser.add_argument("--bond", action='store_true',
                         help="Configure the bond interface")
+    parser.add_argument("--hostname", action='store_true',
+                        help="Configure the hostname of the device")
     args = parser.parse_args()
     return (args)
 
@@ -194,8 +223,8 @@ def main(sys, EditConfig, logger=None):
 #    sys.exit(1) 
 
     args = parse_args(sys)
-    if logger:
-        logger.debug("edit_config.py: about to connect")
+    if logging:
+        logging.debug("edit_config.py: about to connect")
     
     try:
         with manager.connect(
@@ -209,7 +238,13 @@ def main(sys, EditConfig, logger=None):
                 hostkey_verify=False,
         ) as m:
             if args.bond:
+                logging.debug("edit_config.py: executing bond config")
                 EditConfig.bond(m)
+                
+            if args.hostname:
+                logging.debug("edit_config.py: setting hostname")
+                EditConfig.hostname(m)
+                
     except Exception as e:
         print("An error occured:", str(e))
             
